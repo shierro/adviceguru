@@ -2,9 +2,6 @@ language: node_js
 
 node_js:
   - 8
-  - 7
-  - 6
-  - 5
 
 script:
   - node ./internals/scripts/generate-templates-for-linting
@@ -15,8 +12,10 @@ before_install:
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
+  - pip install --user codecov
 
-after_success: 'npm run coveralls'
+after_success:
+  - codecov --file test/unit/coverage/lcov.info --disable search
 
 cache:
   yarn: true
