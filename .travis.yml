@@ -4,7 +4,6 @@ node_js:
   - 8
 
 script:
-  - node ./internals/scripts/generate-templates-for-linting
   - npm run test
   - npm run build
 
@@ -15,7 +14,7 @@ before_install:
   - pip install --user codecov
 
 after_success:
-  - codecov --file test/unit/coverage/lcov.info --disable search
+  - codecov --file coverage/lcov.info --disable search
 
 cache:
   yarn: true
@@ -31,6 +30,6 @@ deploy:
     branch: master
 
 notifications:
-  slack: ninjaro:clZjvDamAByBYA004CYcYlH6
+  slack: ninjaro:$SLACK_TOKEN
   email:
     - theodoro.pelingan@gmail.com

@@ -18,7 +18,6 @@ engines:
 ratings:
   paths:
   - "**.js"
-  - "**.js"
   - "**.scss"
 exclude_paths:
   - internals/
