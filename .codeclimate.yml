@@ -1,0 +1,27 @@
+engines:
+  csslint:
+    enabled: false
+  scss-lint: 
+    enabled: true
+    checks:
+      ImportantRule:
+        enabled: false
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.js"
+  - "**.js"
+  - "**.scss"
+exclude_paths:
+  - internals/
+  - server/
+  - "**/**/tests/"
+  - "**/tests/"

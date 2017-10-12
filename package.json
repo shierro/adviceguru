@@ -1,17 +1,17 @@
 {
-  "name": "react-boilerplate",
-  "version": "3.5.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "name": "adviceguru",
+  "version": "1.0.0",
+  "description": "a platform wherein we people can make or find advices of any sort",
   "repository": {
     "type": "git",
-    "url": "git://github.com/react-boilerplate/react-boilerplate.git"
+    "url": "git://github.com/shierro/adviceguru.git"
   },
   "engines": {
     "npm": ">=3",
     "node": ">=5"
   },
-  "author": "Max Stoiber",
-  "license": "MIT",
+  "author": "Theo",
+  "license": "GNU",
   "scripts": {
     "analyze:clean": "rimraf stats.json",
     "preanalyze": "npm run analyze:clean",
@@ -49,9 +49,6 @@
   },
   "pre-commit": "lint:staged",
   "babel": {
-    "plugins": [
-      "styled-components"
-    ],
     "presets": [
       [
         "env",
@@ -240,7 +237,6 @@
     "redux-saga": "0.15.3",
     "reselect": "3.0.1",
     "sanitize.css": "4.1.0",
-    "styled-components": "2.0.0",
     "warning": "3.0.0",
     "whatwg-fetch": "2.0.3"
   },
@@ -253,7 +249,6 @@
     "babel-plugin-dynamic-import-node": "1.0.2",
     "babel-plugin-react-intl": "2.3.1",
     "babel-plugin-react-transform": "2.0.2",
-    "babel-plugin-styled-components": "1.1.4",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-inline-elements": "6.22.0",
@@ -284,12 +279,14 @@
     "lint-staged": "3.5.1",
     "ngrok": "2.2.9",
     "node-plop": "0.7.0",
+    "node-sass": "^4.5.3",
     "null-loader": "0.1.1",
     "offline-plugin": "4.8.1",
     "plop": "1.8.0",
     "pre-commit": "1.2.2",
     "react-test-renderer": "15.6.1",
     "rimraf": "2.6.1",
+    "sass-loader": "^6.0.6",
     "shelljs": "^0.7.7",
     "style-loader": "0.18.1",
     "url-loader": "0.5.8",
