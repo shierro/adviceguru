@@ -16,13 +16,22 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
-notifications:
-  email:
-    on_failure: change
-
 after_success: 'npm run coveralls'
 
 cache:
   yarn: true
   directories:
     - node_modules
+
+deploy:
+  local_dir: 'build'
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
+
+notifications:
+  slack: ninjaro:clZjvDamAByBYA004CYcYlH6
+  email:
+    - theodoro.pelingan@gmail.com
